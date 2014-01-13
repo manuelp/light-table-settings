@@ -30,9 +30,17 @@
               "alt-enter" [(:paredit.select.parent "(")
                            :eval-editor-form
                            :paredit.select.clear]
+
               "pmeta-alt-enter" [:clear-inline-results]}
 
-     :editor.clojure {"ctrl-shift-a" [:smart-indent-selection]}}
+     :editor.clojure {"ctrl-shift-a" [:paredit.select.parent
+                                      :smart-indent-selection]
+
+                      "ctrl-shift-," [:paredit.shrink.left]
+                      "ctrl-shift-." [:paredit.shrink.right]
+                      "ctrl-alt-," [:paredit.grow.left]
+                      "ctrl-alt-." [:paredit.grow.right]
+                      "ctrl-shift-up" [:paredit.select.parent]}}
 
  :- {;; Occorre disabilitare "[" perchè per un baco di V8 usando il tasto "è" nella
      ;; tastiera italiana questo viene preso come "[" e scatta il behaviour
