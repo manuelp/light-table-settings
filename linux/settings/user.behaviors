@@ -13,14 +13,14 @@
      ;; The app tag is kind of like global scope. You assign behaviors that affect
      ;; all of Light Table here
      :app [(:lt.objs.style/set-skin "dark")
-           (:lt.objs.style/font-settings "Ubuntu Mono" 11 1)
+           (:lt.objs.style/font-settings "Ubuntu Mono" 11.5 1)
            :lt.plugins.auto-complete/auto-show-on-input]
 
      :window [:lt.objs.opener/save-all-on-focus-lost]
 
      ;; The editor tag is applied to all editors
      :editor [:lt.objs.editor/no-wrap
-              (:lt.objs.style/set-theme "ibdknox")
+              (:lt.objs.style/set-theme "solarized")
               ;:lt.objs.editor/line-numbers
               :lt.objs.editor/highlight-current-line]
 
