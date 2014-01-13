@@ -11,13 +11,19 @@
 ;; want to do in between the square brackets (e.g. type "editor").
 
 {:+ {:app {"ctrl-alt-w" [:workspace.show]
-           "ctrl-alt-c" [:toggle-console]
            "ctrl-alt-o" [:show-connect]
-           "ctrl-alt-x" [:clear-console]}}
+           "ctrl-alt-x" [:clear-console]
+           "ctrl-alt-c" [:toggle-console]
+           "ctrl-alt-left" [:tabs.prev]
+           "ctrl-alt-right" [:tabs.next]}
 
      :editor {"alt-w" [:editor.watch.watch-selection]
-              "alt-shift-w" [:editor.watch.unwatch]}
+              "alt-shift-w" [:editor.watch.unwatch]
+
+              "pmeta-k" [:editor.line-start
+                        :editor.kill-line
+                        :editor.delete-char-left]}
 
      :editor.clojure {"alt-enter" [(:paredit.select.parent "(")
                                    :eval-editor-form
-                                   :paredit.select.clear]}}
+                                   :paredit.select.clear]}}}
