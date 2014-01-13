@@ -26,4 +26,9 @@
 
      :editor.clojure {"alt-enter" [(:paredit.select.parent "(")
                                    :eval-editor-form
-                                   :paredit.select.clear]}}}
+                                   :paredit.select.clear]}}
+
+ :- {;; Occorre disabilitare "[" perchè per un baco di V8 usando il tasto "è" nella
+     ;; tastiera italiana questo viene preso come "[" e scatta il behaviour
+     ;; `(:editor.open-pair "[")` com definito da *default.keymap*.
+     :editor.keys.normal ["["]}}
